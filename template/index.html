@@ -1,0 +1,93 @@
+
+  {% extends "layout.html" %}
+  {% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('  {{url_for('static', filename='img/cricketscore1.jpg') }}    ')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>{{params['blog_name']}}</h1>
+            <span class="subheading"> </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!--
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <div class="post-preview">
+          <a href="post.html">
+            <h2 class="post-title">
+              Man must explore, and this is exploration at its greatest
+            </h2>
+            <h3 class="post-subtitle">
+              Problems look mighty small from 150 miles up
+            </h3>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="#">Start Bootstrap</a>
+            on September 24, 2019</p>
+        </div>
+        <hr>
+
+
+        ---->
+        
+        
+        <!-- Pager -->
+        <!--
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+        </div>
+        --->
+         <h1>Cricket Score Prediction<h1>
+    <style type="text/css">
+      div
+      {
+        text-align: center;
+      }
+    </div>
+    </style>
+    <div class="row">
+      <style type="text/css">
+        
+        
+form{
+ position: relative;
+ top: 110%;
+ left: 32%;
+ bottom: -30px;
+ transform: translate(-10%,-10%);
+}
+      </style>
+        <form action="{{ url_for('predict')}}" method="post">
+             <input type="text" name="runs" placeholder="Runs" required="required"/><br/>
+              <input type="text" name="wickets" placeholder="wickets" required="required" /><br/>
+              <input type="text" name="overs" placeholder="overs" required="required" /><br/>
+              <input type="text" name="striker" placeholder="striker" required="required" /><br/>
+              <input type="text" name="non-striker" placeholder="non-striker" required="required" />
+              <br/>
+              <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    </div>
+    <br/>
+    <br/>
+    {{ prediction_text }}
+
+    </div>
+  </div>
+
+</div>
+<li class="nav-item">
+<a class="nav-link" href="/logistic">RandomForest</a>
+</li>
+  <br/>
+{% endblock %}
+ 

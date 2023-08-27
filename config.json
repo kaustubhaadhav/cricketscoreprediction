@@ -1,0 +1,16 @@
+{
+	"params":
+	{
+		"local_server":"True",
+		"local_uri":"mysql://root:@localhost/cricketscore",
+		"prod_uri":"mysql://root:@localhost/cricketscore",
+		"fb_url":"https://facebook.com/cricketscore",
+		"tw_url":"https://twitter.com/cricketscore",
+		"git_url":"https://github.com/cricketscore",
+		"blog_name":"CRICKET SCORE PREDICTION",
+		"login_image":"login.jpeg",
+		"admin_user":"demoproject58@gmail.com",
+		"admin_password":"project@123"
+
+	}
+} 
